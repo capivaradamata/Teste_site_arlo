@@ -1,0 +1,178 @@
+html_content = """
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARLO - Inteligência de Mercado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1a252f;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 80px 5%;
+            background-color: white;
+            flex-wrap: wrap;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            flex-basis: 30%;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ARLO</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Inteligência de Mercado para o Interior Paulista</h1>
+        <p>Transformamos dados em decisões estratégicas. Foco no desenvolvimento regional de Três Lagoas e Araçatuba.</p>
+        <a href="#contato" class="btn">Fale com um Especialista</a>
+    </section>
+
+    <section id="servicos" class="features">
+        <div class="feature-box">
+            <h3>📊 Análise de Dados</h3>
+            <p>Dashboards dinâmicos em Power BI e Python para visualizar o desempenho do seu negócio em tempo real.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📈 Planejamento Estratégico</h3>
+            <p>Mapeamento de oportunidades de mercado e análise de viabilidade financeira para novos projetos.</p>
+        </div>
+        <div class="feature-box">
+            <h3>⚙️ Otimização de Processos</h3>
+            <p>Consultoria para estruturação de dados internos, escalabilidade e governança corporativa.</p>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <p>&copy; 2026 ARLO - Serviços de Dados e Inteligência. Todos os direitos reservados.</p>
+        <p>Araraquara, SP | Contato: contato@arlo.com.br</p>
+    </footer>
+
+</body>
+</html>
+"""
+
+with open("landing_page_arlo.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("Arquivo HTML gerado.")
